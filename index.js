@@ -1,5 +1,12 @@
 let nombre = prompt("Buenas, por favor ingrese su nombre");
 
+const productos = [
+  { id: 1, nombre: "Remera", precio: 3000 },
+  { id: 2, nombre: "Buzos", precio: 10000 },
+  { id: 3, nombre: "Bermudas", precio: 5000 },
+  { id: 4, nombre: "Pantalones", precio: 7500 },
+];
+
 let catalogo;
 
 if (!nombre) {
@@ -7,44 +14,31 @@ if (!nombre) {
 }
 
 function mostrarCatalogo() {
+  let textoOpciones = "";
+  for (producto of productos) {
+    textoOpciones += `${producto.id}. ${producto.nombre} - $${producto.precio}\n`;
+  }
   catalogo = prompt(
-    `Hola ${nombre[0].toUpperCase() + nombre.substring(1)} que desea comprar? 
-        1. Remeras 
-        2. Buzos 
-        3. Bermudas`
+    `Hola ${
+      nombre[0].toUpperCase() + nombre.substring(1)
+    } que desea comprar? \n${textoOpciones}`
   );
-  if (catalogo) {
-    switch (catalogo) {
-      case "1":
-        comprar("remera", 3000);
-        seguirCompra();
-        break;
 
-      case "2":
-        comprar("buzo", 10000);
-        seguirCompra();
-        break;
-
-      case "3":
-        comprar("bermuda", 7500);
-        seguirCompra();
-        break;
-
-      default:
-        mostrarCatalogo();
-        break;
-    }
+  const productoCompra = productos.find((producto) => producto.id == catalogo);
+  if (productoCompra) {
+    comprar(productoCompra);
+    seguirCompra();
+  } else if (catalogo) {
+    mostrarCatalogo();
   }
 }
 
-function comprar(prenda, precio) {
+function comprar(producto) {
   let compra = confirm(
-    `El precio de la ${prenda} es $${precio} \n¿Desea continuar con la compra?`
+    `El precio de la ${producto.nombre} es $${producto.precio} \n¿Desea continuar con la compra?`
   );
   if (compra) {
-    alert(
-      `${prenda[0].toUpperCase() + prenda.substring(1)} comprada con exito!`
-    );
+    alert(`${producto.nombre} comprada con exito!`);
   }
 }
 
