@@ -1,0 +1,32 @@
+footer {
+  padding: 0.2rem 0;
+  text-align: center;
+  border-top: 2px solid $negro;
+  margin-top: auto;
+  background-color: #dddddd;
+}
+
+.redes {
+  display: flex;
+  @include fcenter();
+  font-size: 20px;
+  padding: 10px 0 10px 0;
+  & i {
+    padding: 0 20px;
+  }
+  & a:hover {
+    transform: translateY(-3px) scale(1.05);
+  }
+}
+
+.ig:hover {
+  color: map-get($redes, "instagram");
+}
+
+.wsp:hover {
+  color: map-get($redes, "whatsapp");
+}
+
+.tw:hover {
+  color: map-get($redes, "twitter");
+}

@@ -1,0 +1,257 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #000000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  overflow-x: hidden;
+  background-color: #dddddd;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+video {
+  width: 90%;
+  height: auto;
+}
+
+footer {
+  padding: 0.2rem 0;
+  text-align: center;
+  border-top: 2px solid #000000;
+  margin-top: auto;
+  background-color: #dddddd;
+}
+
+.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px 0 10px 0;
+}
+.redes i {
+  padding: 0 20px;
+}
+.redes a:hover {
+  transform: translateY(-3px) scale(1.05);
+}
+
+.ig:hover {
+  color: #E1306C;
+}
+
+.wsp:hover {
+  color: #25d366;
+}
+
+.tw:hover {
+  color: #55acee;
+}
+
+form {
+  border: solid 2px rgba(0, 0, 0, 0.5607843137);
+  border-radius: 50px;
+  padding: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  resize: none;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 7px;
+}
+input:hover {
+  color: rgba(0, 0, 0, 0.4941176471);
+}
+
+.titulos {
+  text-align: center;
+  margin: 40px 0px 40px 0px;
+  font-size: 2rem;
+}
+
+.subtitulos {
+  text-align: center;
+  margin: 40px 0px 40px 0px;
+  font-size: 1.5rem;
+}
+
+.boton, .boton__inactivo, .boton__activo {
+  padding: 8px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+}
+.boton__activo:hover {
+  background-color: rgba(169, 169, 169, 0.3568627451);
+}
+.boton__inactivo {
+  background-color: #a9a9a9;
+}
+
+.productos {
+  padding-top: 60px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  gap: 15px;
+}
+.productos__precio {
+  font-size: 1.1rem;
+}
+
+.tarjeta {
+  width: 300px;
+  height: 420px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.tarjeta__img {
+  width: 60%;
+}
+.tarjeta__destacados {
+  width: 300px;
+  height: 380px;
+  padding: 10px;
+  border: 2px solid #000000;
+  border-radius: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.hero {
+  height: 92vh;
+  background-image: url(../img/hero.jpg);
+  background-attachment: scroll;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+.hero__texto {
+  text-align: center;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
+  color: #ffffff;
+  background-color: rgba(0, 0, 0, 0.3647058824);
+  border: 4px solid #000000;
+  border-radius: 20px;
+  padding: 30px;
+  margin: 40px;
+  margin-top: 60px;
+  animation: animacion-titulo 2s;
+}
+
+.btnContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 20px;
+  font-size: 1.5rem;
+}
+
+@keyframes animacion-titulo {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.75;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.titulo__envios {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 1.5rem;
+}
+
+.envios {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2.5rem;
+}
+.envios__texto {
+  font-size: 1.15rem;
+}
+
+.info {
+  color: #ffffff;
+  text-shadow: -2px 2px 2px rgba(0, 0, 0, 0.5);
+  padding-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info ul {
+  list-style-type: disc;
+}
+.info__fondo {
+  background-image: url(../img/informacion.jpg);
+  background-position: center;
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 91vh;
+}
+.info__texto {
+  border: solid 0px #000000;
+  border-radius: 30px;
+  padding: 30px;
+  background-color: rgba(0, 0, 0, 0.1843137255);
+}
+
+.formularios {
+  padding-bottom: 25px;
+}
+
+/*# sourceMappingURL=style.css.map */

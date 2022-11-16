@@ -1,0 +1,25 @@
+form {
+  border: solid 2px #0000008f;
+  border-radius: 50px;
+  padding: 25px;
+}
+
+textarea {
+  width: 100%;
+  height: 200px;
+  padding: 10px 10px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  resize: none;
+}
+
+input {
+  width: 100%;
+  padding: 6px;
+  margin: 10px 0;
+  border: 2px solid #ccc;
+  border-radius: 7px;
+  &:hover {
+    color: #0000007e;
+  }
+}

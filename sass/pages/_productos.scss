@@ -1,0 +1,38 @@
+.productos {
+  padding-top: 60px;
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  justify-content: space-evenly;
+  gap: 15px;
+  &__precio {
+    font-size: 1.1rem;
+  }
+}
+
+.tarjeta {
+  width: 300px;
+  height: 420px;
+  padding: 10px;
+  border: 2px solid $negro;
+  border-radius: 20px;
+  background-color: $blanco;
+  @include fcolum();
+  justify-content: space-between;
+  align-items: center;
+  &__img {
+    width: 60%;
+  }
+  &__destacados {
+    width: 300px;
+    height: 380px;
+    padding: 10px;
+    border: 2px solid $negro;
+    border-radius: 20px;
+    background-color: $blanco;
+    @include fcolum();
+    justify-content: space-between;
+    align-items: center;
+  }
+}

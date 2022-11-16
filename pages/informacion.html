@@ -12,26 +12,22 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
     />
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="../css/style.css" />
     <link
       href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400&display=swap"
       rel="stylesheet"
     />
-    <title>Decode - Inicio</title>
-    <meta
-      name="description"
-      content="Ropa oversize con un estilo unico en Argentina"
-    />
+    <title>Decode - Informacion</title>
+    <meta name="description" content="Informacion de Decode" />
     <meta name="keywords" content="Streetwear, Argentina, Ropa, Oversize" />
   </head>
 
-  <body>
+  <body class="info__fondo">
     <header>
       <nav class="navbar navbar-expand-lg bg-body shadow">
         <div class="container-fluid">
-          <a class="navbar-brand" href="">
-            <img src="./img/logo.png" alt="Logo" />
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/logo.png" alt="Logo" />
           </a>
           <button
             class="navbar-toggler"
@@ -47,23 +43,21 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto me-3">
               <li class="nav-item me-3">
-                <a class="nav-link active" aria-current="page" href=""
-                  >Inicio</a
-                >
+                <a class="nav-link" href="../index.html">Inicio</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="./pages/productos.html">Productos</a>
+                <a class="nav-link" href="./productos.html">Productos</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="./pages/contacto.html">Contacto</a>
+                <a class="nav-link" href="./contacto.html">Contacto</a>
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="./pages/sobre_nosotros.html"
+                <a class="nav-link" href="./sobre_nosotros.html"
                   >Sobre Nosotros</a
                 >
               </li>
               <li class="nav-item me-3">
-                <a class="nav-link" href="./pages/informacion.html"
+                <a class="nav-link active" aria-current="page" href=""
                   >Informacion</a
                 >
               </li>
@@ -74,13 +68,48 @@
     </header>
 
     <main>
-      <section class="hero">
-        <div class="hero__texto">
-          <h1>Decode</h1>
-          <h2>Ropa oversize Argentina con el mejor estilo</h2>
-          <div class="btnContainer">
-            <button onclick="mostrarCatalogo()">Comprar</button>
-          </div>
+      <section class="container-fluid">
+        <div class="info">
+          <h1 class="titulos">Informacion</h1>
+
+          <article>
+            <div class="col-12 info__texto">
+              <p><strong>Pagos</strong></p>
+              <ul>
+                <li>Aceptamos todos los medios de pago.</li>
+                <li>Pagando con transferencia tenes un 5% de descuento.</li>
+                <li>Pagando con Paypal tenes un recargo adicional.</li>
+              </ul>
+              <p><strong>Devoluciones / Cambios de talle</strong></p>
+              <ul>
+                <li>Realizamos devoluciones y cambios de talle.</li>
+                <li>
+                  Para una devolución el producto no debe haber sido usado y
+                  debe tener la etiqueta.
+                </li>
+              </ul>
+              <p><strong>Cómo lavar la prenda</strong></p>
+              <ul>
+                <li>Recomendamos lavar la prenda a mano.</li>
+                <li>No planchar la prenda sobre la estampa.</li>
+                <li>Lavar con agua fría.</li>
+                <li>En caso de usar lavarropas, usar jabon liquido.</li>
+              </ul>
+              <p><strong>Envíos</strong></p>
+              <ul>
+                <li>Realizamos envíos a todo el país.</li>
+                <li>
+                  Los envíos suelen realizarse en menos de 72hs siendo de CABA O
+                  GBA.
+                </li>
+                <li>Los envíos internacionales suelen tardar 1 semana.</li>
+                <li>
+                  Podrás hacer un seguimiento del envío una vez confirmado el
+                  pago.
+                </li>
+              </ul>
+            </div>
+          </article>
         </div>
       </section>
     </main>
@@ -106,13 +135,6 @@
       </div>
     </footer>
 
-    <script src="index.js"></script>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
-
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
   </body>
 </html>

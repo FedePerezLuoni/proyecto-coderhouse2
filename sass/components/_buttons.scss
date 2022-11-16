@@ -1,0 +1,15 @@
+.boton {
+  padding: 8px;
+  border: 2px solid $negro;
+  border-radius: 20px;
+  &__activo {
+    @extend .boton;
+    &:hover {
+      background-color: #a9a9a95b;
+    }
+  }
+  &__inactivo {
+    @extend .boton;
+    background-color: #a9a9a9;
+  }
+}
