@@ -1,4 +1,4 @@
-let nombre = prompt("Buenas, por favor ingrese su nombre");
+/* let nombre = prompt("Buenas, por favor ingrese su nombre");
 
 const productos = [
   { id: 1, nombre: "Remera", precio: 3000 },
@@ -47,4 +47,25 @@ function seguirCompra() {
   if (seguirCompra) {
     mostrarCatalogo();
   }
+} */
+
+/* function comprarProducto(nombre, precio) {
+  let carrito = [];
+  if (localStorage.getItem("cart") != undefined) {
+    carrito = JSON.parse(localStorage.getItem("cart"));
+  }
+  carrito.push({ nombre, precio });
+  localStorage.setItem("cart", JSON.stringify(carrito));
+} */
+
+/* CARRITO DE COMPRA */
+
+function comprarProducto(nombre, precio) {
+  let carrito = [];
+  if (localStorage.getItem("cart") != undefined) {
+    carrito = JSON.parse(localStorage.getItem("cart"));
+    alert("Producto agregado al carrito");
+  }
+  carrito.push({ nombre, precio });
+  localStorage.setItem("cart", JSON.stringify(carrito));
 }

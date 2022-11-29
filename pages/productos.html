@@ -62,6 +62,11 @@
               <li class="nav-item me-3">
                 <a class="nav-link" href="./informacion.html">Informacion</a>
               </li>
+              <li class="nav-item me-3">
+                <a class="nav-link" href="./carrito.html"
+                  ><i class="bi bi-cart"></i
+                ></a>
+              </li>
             </ul>
           </div>
         </div>
@@ -96,8 +101,11 @@
                   alt="Buzo Vcode"
                   class="tarjeta__img"
                 />
-                <button class="boton__activo">
-                  <a href="../pages/compra.html">Comprar</a>
+                <button
+                  onclick="comprarProducto('Vcode', 10000)"
+                  class="boton__activo"
+                >
+                  <a>Comprar</a>
                 </button>
                 <p class="productos__precio">$10.000</p>
               </div>
@@ -122,8 +130,11 @@
                   alt="Buzo Fallen"
                   class="tarjeta__img"
                 />
-                <button class="boton__activo">
-                  <a href="../pages/compra.html">Comprar</a>
+                <button
+                  onclick="comprarProducto('Fallen', 15000)"
+                  class="boton__activo"
+                >
+                  <a>Comprar</a>
                 </button>
                 <p class="productos__precio">$15.000</p>
               </div>
@@ -170,8 +181,11 @@
                   alt="Remera Sorry 13"
                   class="tarjeta__img"
                 />
-                <button class="boton__activo">
-                  <a href="../pages/compra.html">Comprar</a>
+                <button
+                  onclick="comprarProducto('Sorry 13', 5000)"
+                  class="boton__activo"
+                >
+                  <a>Comprar</a>
                 </button>
                 <p class="productos__precio">$5.000</p>
               </div>
@@ -183,8 +197,11 @@
                   alt="Remera THRIVING ON CHAOS"
                   class="tarjeta__img"
                 />
-                <button class="boton__activo">
-                  <a href="../pages/compra.html">Comprar</a>
+                <button
+                  onclick="comprarProducto('THRIVING CHAOS', 5000)"
+                  class="boton__activo"
+                >
+                  <a>Comprar</a>
                 </button>
                 <p class="productos__precio">$5.000</p>
               </div>
@@ -214,6 +231,8 @@
         <p>© Decode 2022 | Todos los derechos reservados</p>
       </div>
     </footer>
+
+    <script src="../index.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 
