@@ -64,7 +64,6 @@ function comprarProducto(nombre, precio) {
   let carrito = [];
   if (localStorage.getItem("cart") != undefined) {
     carrito = JSON.parse(localStorage.getItem("cart"));
-    alert("Producto agregado al carrito");
   }
   carrito.push({ nombre, precio });
   localStorage.setItem("cart", JSON.stringify(carrito));
