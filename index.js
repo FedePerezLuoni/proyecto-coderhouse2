@@ -1,64 +1,4 @@
-/* let nombre = prompt("Buenas, por favor ingrese su nombre");
-
-const productos = [
-  { id: 1, nombre: "Remera", precio: 3000 },
-  { id: 2, nombre: "Buzos", precio: 10000 },
-  { id: 3, nombre: "Bermudas", precio: 5000 },
-  { id: 4, nombre: "Pantalones", precio: 7500 },
-];
-
-let catalogo;
-
-if (!nombre) {
-  nombre = "usuario";
-}
-
-function mostrarCatalogo() {
-  let textoOpciones = "";
-  for (producto of productos) {
-    textoOpciones += `${producto.id}. ${producto.nombre} - $${producto.precio}\n`;
-  }
-  catalogo = prompt(
-    `Hola ${
-      nombre[0].toUpperCase() + nombre.substring(1)
-    } que desea comprar? \n${textoOpciones}`
-  );
-
-  const productoCompra = productos.find((producto) => producto.id == catalogo);
-  if (productoCompra) {
-    comprar(productoCompra);
-    seguirCompra();
-  } else if (catalogo) {
-    mostrarCatalogo();
-  }
-}
-
-function comprar(producto) {
-  let compra = confirm(
-    `El precio de la ${producto.nombre} es $${producto.precio} \n¿Desea continuar con la compra?`
-  );
-  if (compra) {
-    alert(`${producto.nombre} comprada con exito!`);
-  }
-}
-
-function seguirCompra() {
-  let seguirCompra = confirm("¿Quiere continuar comprando?");
-  if (seguirCompra) {
-    mostrarCatalogo();
-  }
-} */
-
-/* function comprarProducto(nombre, precio) {
-  let carrito = [];
-  if (localStorage.getItem("cart") != undefined) {
-    carrito = JSON.parse(localStorage.getItem("cart"));
-  }
-  carrito.push({ nombre, precio });
-  localStorage.setItem("cart", JSON.stringify(carrito));
-} */
-
-/* CARRITO DE COMPRA */
+/* CARRITO DE COMPRA EN SECCION PRODUCTOS*/
 
 function comprarProducto(nombre, precio) {
   let carrito = [];
@@ -68,3 +8,54 @@ function comprarProducto(nombre, precio) {
   carrito.push({ nombre, precio });
   localStorage.setItem("cart", JSON.stringify(carrito));
 }
+
+/* CONTACTO */
+
+let enviar = document.getElementById("enviar");
+
+enviar.addEventListener("submit", (event) => {
+  event.preventDefault();
+  fetch("https://api.sendgrid.com/v3/mail/send", {
+    method: "POST",
+
+    headers: {
+      "Content-Type": "application/json",
+      Authorization: `Bearer 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`,
+    },
+    body: JSON.stringify({
+      personalizations: [
+        {
+          to: [
+            {
+              email: "ffedeperezluoni@gmail.com",
+            },
+          ],
+        },
+      ],
+      from: {
+        email: "decodeba2022@gmail.com",
+      },
+      subject: "Decode",
+      content: [
+        {
+          type: "text/html",
+          value: `
+          
+          <h2>Nombre: ${document.getElementById("nombre").value} ${
+            document.getElementById("apellido").value
+          }</h2> \n
+          <h2>De: ${document.getElementById("email").value}</h2> \n
+          <h2>Telefono: ${document.getElementById("telefono").value}</h2> \n
+          <h2>Mensaje: ${
+            document.getElementById("mensaje-usuario").value
+          }</h2> \n
+   
+          `,
+        },
+      ],
+    }),
+  })
+    .then(() => console.log("Mensaje enviado con exito"))
+    .catch((e) => console.error(e));
+  Swal.fire("Mensaje enviado", "Pronto nos pondremos en contacto!", "success");
+});

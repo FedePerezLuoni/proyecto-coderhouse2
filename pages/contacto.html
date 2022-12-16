@@ -79,7 +79,7 @@
       <h1 class="titulos">Contacto</h1>
 
       <div class="container formularios">
-        <form class="row g-3">
+        <form class="row g-3" id="enviar">
           <div class="col-md-6">
             <label for="nombre">Nombre</label>
             <input type="text" id="nombre" required />
@@ -115,7 +115,7 @@
             </div>
           </div>
           <div class="col-12">
-            <button type="submit" class="btn btn-secondary">Enviar</button>
+            <input type="submit" class="btn btn-secondary" value="Enviar" />
           </div>
         </form>
       </div>
@@ -143,5 +143,9 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <script src="../index.js"></script>
   </body>
 </html>
