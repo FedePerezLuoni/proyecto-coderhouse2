@@ -1,13 +1,13 @@
-/* CARRITO DE COMPRA EN SECCION PRODUCTOS*/
+/* CARRITO DE COMPRA */
 
-function comprarProducto(nombre, precio) {
-  let carrito = [];
-  if (localStorage.getItem("cart") != undefined) {
-    carrito = JSON.parse(localStorage.getItem("cart"));
-  }
-  carrito.push({ nombre, precio });
-  localStorage.setItem("cart", JSON.stringify(carrito));
-}
+const btnCart = document.querySelector(".container-cart-icon");
+const containerCartProducts = document.querySelector(
+  ".container-cart-products"
+);
+
+btnCart.addEventListener("click", () => {
+  containerCartProducts.classList.toggle("hidden-cart");
+});
 
 /* CONTACTO */
 
