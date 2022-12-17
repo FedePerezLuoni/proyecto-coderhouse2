@@ -62,61 +62,12 @@
               <li class="nav-item me-3">
                 <a class="nav-link" href="./informacion.html">Informacion</a>
               </li>
-              <li class="nav-item me-3">
-                <a class="nav-link" href="./carrito.html"
-                  ><i class="bi bi-cart"></i
-                ></a>
+              <li>
+                <button type="button" class="nav-link bg-body borde__carrito" data-bs-toggle="modal" data-bs-target="#Modal">
+                  <i class="bi bi-cart2" id="contenedor__carrito">0</i>
+                </button>
               </li>
             </ul>
-          </div>
-        </div>
-        <div class="container-icon">
-          <div class="container-cart-icon">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke-width="1.5"
-              stroke="currentColor"
-              class="icon-cart"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M15.75 10.5V6a3.75 3.75 0 10-7.5 0v4.5m11.356-1.993l1.263 12c.07.665-.45 1.243-1.119 1.243H4.25a1.125 1.125 0 01-1.12-1.243l1.264-12A1.125 1.125 0 015.513 7.5h12.974c.576 0 1.059.435 1.119 1.007zM8.625 10.5a.375.375 0 11-.75 0 .375.375 0 01.75 0zm7.5 0a.375.375 0 11-.75 0 .375.375 0 01.75 0z"
-              />
-            </svg>
-            <div class="count-products">
-              <span id="contador-productos">0</span>
-            </div>
-          </div>
-
-          <div class="container-cart-products hidden-cart">
-            <div class="cart-product">
-              <div class="info-cart-product">
-                <span class="cantidad-producto-carrito">1</span>
-                <p class="titulo-producto-carrito">Zapatos Nike</p>
-                <span class="precio-producto-carrito">$80</span>
-              </div>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="icon-close"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M6 18L18 6M6 6l12 12"
-                />
-              </svg>
-            </div>
-            <div class="cart-total">
-              <h3>Total:</h3>
-              <span class="total-pagar">$200</span>
-            </div>
           </div>
         </div>
       </nav>
@@ -129,135 +80,30 @@
         <div class="row">
           <article class="col-12">
             <h2 class="h3 text-center">Buzos</h2>
-            <div class="productos">
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>Trapstar</h3>
-                <img
-                  src="../img/buzo_trapstar.png"
-                  alt="Buzo Trapstar"
-                  class="tarjeta__img"
-                />
-                <button class="boton__inactivo">
-                  <a href="#">SIN STOCK</a>
-                </button>
-                <p class="productos__precio">$15.000</p>
-              </div>
-
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>Vcode</h3>
-                <img
-                  src="../img/buzo_vcode.jpg"
-                  alt="Buzo Vcode"
-                  class="tarjeta__img"
-                />
-                <button
-                  onclick="comprarProducto('Vcode', 10000)"
-                  class="boton__activo"
-                >
-                  <a>Comprar</a>
-                </button>
-                <p class="productos__precio">$10.000</p>
-              </div>
-
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>Culture</h3>
-                <img
-                  src="../img/buzo_culture.png"
-                  alt="Buzo Culture"
-                  class="tarjeta__img"
-                />
-                <button class="boton__inactivo">
-                  <a href="#">SIN STOCK</a>
-                </button>
-                <p class="productos__precio">$12.500</p>
-              </div>
-
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>Fallen</h3>
-                <img
-                  src="../img/buzo_fallen.png"
-                  alt="Buzo Fallen"
-                  class="tarjeta__img"
-                />
-                <button
-                  onclick="comprarProducto('Fallen', 15000)"
-                  class="boton__activo"
-                >
-                  <a>Comprar</a>
-                </button>
-                <p class="productos__precio">$15.000</p>
-              </div>
-            </div>
+            <div class="productos" id="contenedor__productos">
           </article>
         </div>
       </section>
 
-      <section class="container-fluid">
-        <div class="row">
-          <article class="col-12">
-            <h2 class="h3 text-center mt-5">Remeras</h2>
-            <div class="productos">
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>B$TRD Crew</h3>
-                <img
-                  src="../img/remera_crew.png"
-                  alt="Remera BSTRD CREW"
-                  class="tarjeta__img"
-                />
-                <button class="boton__inactivo">
-                  <a href="#">SIN STOCK</a>
-                </button>
-                <p class="productos__precio">$5.000</p>
-              </div>
-
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>H8ers</h3>
-                <img
-                  src="../img/remera_h8ers.png"
-                  alt="Remera h8ers"
-                  class="tarjeta__img"
-                />
-                <button class="boton__inactivo">
-                  <a href="#">SIN STOCK</a>
-                </button>
-                <p class="productos__precio">$5.000</p>
-              </div>
-
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>Sorry 13</h3>
-                <img
-                  src="../img/remera_s13.png"
-                  alt="Remera Sorry 13"
-                  class="tarjeta__img"
-                />
-                <button
-                  onclick="comprarProducto('Sorry 13', 5000)"
-                  class="boton__activo"
-                >
-                  <a>Comprar</a>
-                </button>
-                <p class="productos__precio">$5.000</p>
-              </div>
-
-              <div class="tarjeta" data-aos="fade-right">
-                <h3>THRIVING CHAOS</h3>
-                <img
-                  src="../img/remera_chaos.png"
-                  alt="Remera THRIVING ON CHAOS"
-                  class="tarjeta__img"
-                />
-                <button
-                  onclick="comprarProducto('THRIVING CHAOS', 5000)"
-                  class="boton__activo"
-                >
-                  <a>Comprar</a>
-                </button>
-                <p class="productos__precio">$5.000</p>
-              </div>
+      <div class="modal fade" id="Modal" tabindex="-1" aria-labelledby="ModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title fs-5" id="ModalLabel">Carrito</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
-          </article>
+            <div class="modal-body">
+
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-danger" id="vaciar__carrito">Vaciar Carrito</button>
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+              <p>Precio total:</p>
+              <p id="total"></p>
+            </div>
+          </div>
         </div>
-      </section>
+      </div>
     </main>
 
     <footer>
