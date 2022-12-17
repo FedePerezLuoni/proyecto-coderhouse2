@@ -77,7 +77,7 @@ footer {
 }
 
 .ig:hover {
-  color: #E1306C;
+  color: #e1306c;
 }
 
 .wsp:hover {
@@ -126,7 +126,9 @@ input:hover {
   font-size: 1.5rem;
 }
 
-.boton, .boton__inactivo, .boton__activo {
+.boton,
+.boton__inactivo,
+.boton__activo {
   padding: 8px;
   border: 2px solid #000000;
   border-radius: 20px;

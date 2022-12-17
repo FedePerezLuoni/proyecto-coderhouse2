@@ -48,7 +48,7 @@ let listaProductos = [
     nombre: "Sorry 13",
     cantidad: 1,
     precio: 5000,
-    img: "../buzo_remera_s13.png",
+    img: "../remera_s13.png",
   },
   {
     id: 8,
